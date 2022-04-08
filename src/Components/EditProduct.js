@@ -4,7 +4,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
-const endpoint = process.env.REACT_APP_URL;
+const endpoint = `${process.env.REACT_APP_URL}`;
 const EditProduct = () => {
 	const [description, setDescription] = useState("");
 	const [stock, setStock] = useState(0);
