@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-const endpoint = "http://127.0.0.1:8000/api";
+const endpoint = process.env.REACT_APP_URL;
 const ShowProducts = () => {
 	const [products, setProducts] = useState([]);
 	useEffect(() => {
@@ -11,7 +11,7 @@ const ShowProducts = () => {
 	}, []);
 
 	const getAllProducts = async () => {
-		const response = await axios.get(`${endpoint}/products`);
+		const response = await axios.get(`${endpoint}products`);
 		setProducts(response.data);
 	};
 
