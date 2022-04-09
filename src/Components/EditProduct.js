@@ -4,7 +4,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
-const endpoint = `${process.env.REACT_APP_URL}`;
+const endpoint = `http://127.0.0.1:8000/api/`;
 const EditProduct = () => {
 	const [description, setDescription] = useState("");
 	const [stock, setStock] = useState(0);
@@ -14,7 +14,7 @@ const EditProduct = () => {
 	const update = async (e) => {
 		e.preventDefault();
 
-		await axios.put(`${endpoint}${id}`, {
+		await axios.put(`${endpoint}product/${id}`, {
 			description: description,
 			price: price,
 			stock: stock,

@@ -3,7 +3,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-const endpoint = `${process.env.REACT_APP_URL}`;
+const endpoint = 'http://127.0.0.1:8000/api/'
+console.log(endpoint);
 const ShowProducts = () => {
 	console.log(endpoint);
 	const [products, setProducts] = useState([]);
