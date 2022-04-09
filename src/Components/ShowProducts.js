@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-const endpoint = 'http://127.0.0.1:8000/api/'
+const endpoint = 'https://blooming-harbor-97799.herokuapp.com/api/'
 console.log(endpoint);
 const ShowProducts = () => {
 	console.log(endpoint);

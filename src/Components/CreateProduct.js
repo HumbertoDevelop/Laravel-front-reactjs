@@ -4,7 +4,7 @@ import axios from "axios";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const endpoint = `http://127.0.0.1:8000/api/`;
+const endpoint = `https://blooming-harbor-97799.herokuapp.com/api/product`;
 const CreateProduct = () => {
 	const [description, setDescription] = useState("");
 	const [stock, setStock] = useState(0);
